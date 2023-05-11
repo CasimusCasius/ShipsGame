@@ -1,0 +1,12 @@
+F:\Repos\ShipsGame\ShipsGame\bin\Debug\ShipsGame.exe.config
+F:\Repos\ShipsGame\ShipsGame\bin\Debug\ShipsGame.exe
+F:\Repos\ShipsGame\ShipsGame\bin\Debug\ShipsGame.pdb
+F:\Repos\ShipsGame\ShipsGame\obj\Debug\ShipsGame.csproj.AssemblyReference.cache
+F:\Repos\ShipsGame\ShipsGame\obj\Debug\ShipsGame.csproj.SuggestedBindingRedirects.cache
+F:\Repos\ShipsGame\ShipsGame\obj\Debug\ShipsGame.Okna.Rozgrywka.resources
+F:\Repos\ShipsGame\ShipsGame\obj\Debug\ShipsGame.Okna.UstawienieStatkow.resources
+F:\Repos\ShipsGame\ShipsGame\obj\Debug\ShipsGame.Properties.Resources.resources
+F:\Repos\ShipsGame\ShipsGame\obj\Debug\ShipsGame.csproj.GenerateResource.cache
+F:\Repos\ShipsGame\ShipsGame\obj\Debug\ShipsGame.csproj.CoreCompileInputs.cache
+F:\Repos\ShipsGame\ShipsGame\obj\Debug\ShipsGame.exe
+F:\Repos\ShipsGame\ShipsGame\obj\Debug\ShipsGame.pdb

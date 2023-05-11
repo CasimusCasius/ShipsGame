@@ -73,7 +73,6 @@
             this.btnObrot.TabIndex = 4;
             this.btnObrot.Text = "Obróć";
             this.btnObrot.UseVisualStyleBackColor = true;
-            this.btnObrot.Click += new System.EventHandler(this.btnObrot_Click);
             // 
             // btnDalej
             // 
@@ -94,7 +93,6 @@
             this.planszaGracza.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.planszaGracza.TabIndex = 0;
             this.planszaGracza.TabStop = false;
-            this.planszaGracza.MouseMove += new System.Windows.Forms.MouseEventHandler(this.planszaGracza_MouseMove);
             // 
             // UstawienieStatkow
             // 

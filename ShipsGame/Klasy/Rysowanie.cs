@@ -24,7 +24,7 @@ namespace ShipsGame.Klasy
 
         /// <summary>
         /// kolory oznaczenia statków
-        /// ostatni kolor do 
+        /// ostatni kolor do statków zniszonych
         /// </summary>
         public static readonly Brush[] kolory = new SolidBrush[5]
         {
@@ -35,12 +35,12 @@ namespace ShipsGame.Klasy
             new SolidBrush(Color.FromArgb(PRZEZROCZYSTOSC, Color.Violet))
         };
 
-        //public static void RysujObramowanie(int komorkaX, int komorkaY, int kolor, PictureBox plansza)
-        //{
-        //    Graphics graphics = plansza.CreateGraphics();
-        //    graphics.DrawRectangle(new Pen(kolory[kolor], 3), komorkaX * SZEROKOSC_KOMORKI, komorkaY * SZEROKOSC_KOMORKI, SZEROKOSC_RAMKI, WYSOKOSC_RAMKI);
-        //}
-        
+        public static void RysujObramowanie(int komorkaX, int komorkaY, int kolor, PictureBox plansza)
+        {
+            Graphics graphics = plansza.CreateGraphics();
+            graphics.DrawRectangle(new Pen(kolory[kolor], 3), komorkaX * SZEROKOSC_KOMORKI, komorkaY * SZEROKOSC_KOMORKI, SZEROKOSC_RAMKI, WYSOKOSC_RAMKI);
+        }
+
         /*public static void RysujKomorke(int komorkaX, int komorkaY, int kolor, PaintEventArgs e)
         {
             e.Graphics.FillRectangle(kolory[kolor], komorkaX * SZEROKOSC_KOMORKI, komorkaY * SZEROKOSC_KOMORKI, SZEROKOSC_KOMORKI, WYSOKOSC_KOMORKI);

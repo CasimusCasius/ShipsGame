@@ -13,9 +13,82 @@ namespace ShipsGame.Okna
 {
     public partial class UstawienieStatkow : Form
     {
+        int myszX;
+        int myszY;
+
+        int indexAktualnegoStatku;
+
+        bool czyPoziomo;
+
+        bool[] rozmieszczoneStatki = new bool[4];
+
         public UstawienieStatkow()
         {
             InitializeComponent();
+
+            planszaGracza.Width = 400;
+            planszaGracza.Height = 400;
+
+            czyPoziomo = true;
+
+            Gra.Uzytkownik = new Gracz();
+            Gra.Komputer = new Gracz();
+
+            indexAktualnegoStatku = 2; // po testach wartość 0
+
+            lblNazwaGracza.Visible = false;
+            btnDalej.Enabled = false;
+
+        }
+
+        private void planszaGracza_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (indexAktualnegoStatku < rozmieszczoneStatki.Length)
+            {
+                myszX = Koordynaty.PobierzKomorke(e.Location.X);
+                myszY = Koordynaty.PobierzKomorke(e.Location.Y);
+
+                planszaGracza.Refresh();
+
+                if (czyPoziomo)
+                {
+                    for (int i = 0; i < Gra.RozmiaryStatkow[indexAktualnegoStatku]; i++)
+                    {
+                        if (myszX + i <= Gracz.OSTATNI_INDEX_PLANSZY)
+                        {
+                            Rysowanie.RysujObramowanie(myszX + i, myszY,
+                                indexAktualnegoStatku, planszaGracza);
+                        }
+                        else
+                        {
+                            break;
+                        }    
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < Gra.RozmiaryStatkow[indexAktualnegoStatku]; i++)
+                    {
+                        if (myszY + i <= Gracz.OSTATNI_INDEX_PLANSZY)
+                        {
+                            Rysowanie.RysujObramowanie(myszX, myszY + i,
+                                indexAktualnegoStatku, planszaGracza);
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+                }
+
+
+
+            }
+        }
+
+        private void btnObrot_Click(object sender, EventArgs e)
+        {
+            czyPoziomo = !czyPoziomo;
         }
     }
 }

@@ -34,6 +34,7 @@
             this.btnObrot = new System.Windows.Forms.Button();
             this.btnDalej = new System.Windows.Forms.Button();
             this.planszaGracza = new System.Windows.Forms.PictureBox();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.planszaGracza)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,6 +74,7 @@
             this.btnObrot.TabIndex = 4;
             this.btnObrot.Text = "Obróć";
             this.btnObrot.UseVisualStyleBackColor = true;
+            this.btnObrot.Click += new System.EventHandler(this.btnObrot_Click);
             // 
             // btnDalej
             // 
@@ -93,11 +95,11 @@
             this.planszaGracza.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.planszaGracza.TabIndex = 0;
             this.planszaGracza.TabStop = false;
+            this.planszaGracza.MouseMove += new System.Windows.Forms.MouseEventHandler(this.planszaGracza_MouseMove);
             // 
             // UstawienieStatkow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(639, 450);
             this.Controls.Add(this.btnDalej);
             this.Controls.Add(this.btnObrot);
@@ -121,5 +123,6 @@
         private System.Windows.Forms.Label lblNazwaGracza;
         private System.Windows.Forms.Button btnObrot;
         private System.Windows.Forms.Button btnDalej;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }
